@@ -1,0 +1,139 @@
+body, html {
+    padding:0;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+    font-size:14px;
+    font-weight:300;
+    height:100%;
+}
+
+.container {
+    width:750px;
+    margin:0 auto;
+    transition: all 0.2s ease;
+    margin-bottom:100px;
+}
+
+.comment {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height:250px;
+    width:100%;
+    margin-top:20px;
+    padding:10px;
+    position:relative;
+}
+
+@media only screen and (max-width:850px){
+    .container {
+        width:100%;
+        transition: all 0.2s ease;
+    }
+    .comment {
+        height:350px;
+    }
+    .likes {
+        margin-top:30px;
+    }
+}
+
+.comment-text:after {
+    content: '';
+    width:100%;
+    height:1px;
+    background: #eee;
+    position: absolute;
+    bottom:-10px;
+    left:0;
+    border-radius:50%;
+}
+
+.reply {
+    background: #fcfcfc;
+}
+
+.user {
+    height:70px;
+    position:relative;
+}
+
+.replyTo {
+    color: #c8ac4c;
+}
+
+.user-photo {
+    width:50px;
+    height:50px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    position:absolute;
+    left:10px;
+    top:10px;
+
+}
+
+.user-name {
+    position: absolute;
+    left:70px;
+    top:25px;
+    font-weight: 700;
+}
+
+.time {
+    position: absolute;
+    top:25px;
+    right:20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #b8b8b8;
+}
+
+.comment:hover .time {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.user-photo, .user-name {
+    display:inline;
+}
+
+.comment-text {
+
+    box-sizing: border-box;
+    padding-left:70px;
+    padding-right:50px;
+    text-align: justify;
+    line-height: 1.6em;
+}
+
+.likes {
+    float:right;
+    margin-right:30px;
+    position:relative;
+}
+
+.likes a, a:visited {
+    color:#333;
+    text-decoration: none;
+}
+
+.likes a:hover {
+    color: #646464;
+    text-decoration: underline;
+
+}
+
+.count {
+    margin-right:20px;
+}
+
+.count:before {
+    content: url('../img/like.png');
+    width:16px;
+    height:16px;
+    position:absolute;
+    left:-24px;
+    top:2px;
+}
